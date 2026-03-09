@@ -54,7 +54,8 @@ def home(request: Request):
         {
             "request": request,
             "scores": get_scores(),
-            "message": ""
+            "message": "",
+            "username": ""
         }
     )
 
@@ -88,6 +89,7 @@ def guess(request: Request, username: str = Form(...), number: int = Form(...)):
         {
             "request": request,
             "scores": get_scores(),
-            "message": message
+            "message": message,
+            "username": username
         }
     )
